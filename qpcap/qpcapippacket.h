@@ -51,7 +51,10 @@ public:
     int headerLength() const;
 
     int protocol() const;
+<<<<<<< HEAD
     QString protocol_str() const;
+=======
+>>>>>>> e05888cce7d2127ac34c0891fccb294cca5aeee2
 
     QHostAddress source() const;
     QHostAddress dest() const;

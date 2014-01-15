@@ -21,7 +21,11 @@
 #include <QDebug>
 #include <QSocketNotifier>
 
+<<<<<<< HEAD
 #include "pcap.h"
+=======
+#include <pcap.h>
+>>>>>>> e05888cce7d2127ac34c0891fccb294cca5aeee2
 
 #include "qpcap.h"
 
@@ -97,12 +101,15 @@ QPcap::~QPcap()
     delete d;
 }
 
+<<<<<<< HEAD
 QPcap &QPcap::operator=(const QPcap &p)
 {
     d = new QPcapPrivate(*p.d);
     return *this;
 }
 
+=======
+>>>>>>> e05888cce7d2127ac34c0891fccb294cca5aeee2
 bool QPcap::isValid() const
 {
     return (0 != d->handle);
@@ -125,6 +132,7 @@ QString QPcap::lookupDevice()
     return QString::fromLocal8Bit(dev);
 }
 
+<<<<<<< HEAD
 QStringList QPcap::findalldevs()
 {
     pcap_if_t *alldevs;
@@ -140,6 +148,8 @@ QStringList QPcap::findalldevs()
     return list;
 }
 
+=======
+>>>>>>> e05888cce7d2127ac34c0891fccb294cca5aeee2
 bool QPcap::open( const QString &dev, int snaplen, bool promisc )
 {
     d->handle = pcap_open_live( dev.toLocal8Bit().constData(),

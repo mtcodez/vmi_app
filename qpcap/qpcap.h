@@ -50,14 +50,20 @@ class QPcap : public QObject
 public:
     QPcap( QObject *parent=0 );
     ~QPcap();
+<<<<<<< HEAD
     QPcap &operator=(const QPcap& p);
+=======
+>>>>>>> e05888cce7d2127ac34c0891fccb294cca5aeee2
 
     bool isValid() const;
 
     QString errorString() const;
 
     QString lookupDevice();
+<<<<<<< HEAD
     QStringList findalldevs();
+=======
+>>>>>>> e05888cce7d2127ac34c0891fccb294cca5aeee2
 
     bool open( const QString &dev, int snaplen=65536, bool promisc=true );
     bool close();
